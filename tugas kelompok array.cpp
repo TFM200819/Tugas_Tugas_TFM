@@ -21,6 +21,16 @@ int main()
     kumpulanlagu[3] = {"Denny Caknan", "Sigar", 278, 142};
     kumpulanlagu[4] = {"Gilga Sahid", "Nemu", 351, 184};
 
+    cout << "List lagu sekarang:" << endl;
+    for (int i = 0; i < 5; i++)
+    {
+      cout << "Artist: " << kumpulanlagu[i].artis;
+      cout << " Judul: " << kumpulanlagu[i].judul;
+      cout << " Played: " << kumpulanlagu[i].played;
+      cout << " Likes: " << kumpulanlagu[i].likes << endl;
+    }
+    cout << " " << endl;
+
     // Buat array baru karena yg lama udh mentok.
     lagu* lagubaru = new lagu[7];
 
@@ -34,7 +44,17 @@ int main()
     lagubaru[5] = {"Masddho", "Kisinan 2", 347, 23};
     lagubaru[6] = {"Aftershine", "Kalah", 101, 54};
 
+    cout << "List lagu setelah ditambah:" << endl;
+    for (int i = 0; i < 7; i++)
+    {
+      cout << "Artist: " << lagubaru[i].artis;
+      cout << " Judul: " << lagubaru[i].judul;
+      cout << " Played: " << lagubaru[i].played;
+      cout << " Likes: " << lagubaru[i].likes << endl;
+    }
+    cout << " " << endl;
     // 200 played
+    cout << "List lagu 200 played" << endl;
     for (int i = 0; i < 7; i++)
     {
         if (lagubaru[i].played > 200)
@@ -43,12 +63,12 @@ int main()
             cout << " Judul: " << lagubaru[i].judul;
             cout << " Played: " << lagubaru[i].played;
             cout << " Likes: " << lagubaru[i].likes << endl;
-            cout << " " << endl;
         };
         
     };
-    
+    cout << " " << endl;
     // Ngelist yg ganjil
+    cout << "List Lagu ganjil" << endl;
     for (int i = 0; i < 7; i++)
     {
         if (i % 2 == 0)

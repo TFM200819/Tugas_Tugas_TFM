@@ -23,7 +23,7 @@ int main()
     list_lagu.push_back({"Gilga Sahid", "Nemu", 351, 184});
 
     cout << "List lagu sekarang:" << endl;
-    for (int i = 0; i < 5; i++)
+    for (size_t i = 0; i < list_lagu.size(); i++)
     {
       cout << "Artist: " << list_lagu[i].artis;
       cout << " Judul: " << list_lagu[i].judul;
@@ -36,7 +36,7 @@ int main()
     list_lagu.push_back({"Aftershine", "Kalah", 101, 54});
     
     cout << "List lagu setelah ditambah:" << endl;
-    for (int i = 0; i < 7; i++)
+    for (size_t i = 0; i < list_lagu.size(); i++)
     {
       cout << "Artist: " << list_lagu[i].artis;
       cout << " Judul: " << list_lagu[i].judul;
@@ -46,7 +46,7 @@ int main()
     cout << " " << endl;
     // 200 played
     cout << "List lagu 200 played" << endl;
-    for (int i = 0; i < 7; i++)
+    for (size_t i = 0; i < list_lagu.size(); i++)
     {
         if (list_lagu[i].played > 200)
         {
@@ -60,7 +60,7 @@ int main()
     cout << " " << endl;
     // Ngelist yg ganjil
     cout << "List Lagu ganjil" << endl;
-    for (int i = 0; i < 7; i++)
+    for (size_t i = 0; i < list_lagu.size(); i++)
     {
         if (i % 2 == 0)
         {

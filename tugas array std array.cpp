@@ -36,13 +36,14 @@ int main ()
     // Buat array baru karena yg lama penuh
     array<lagu, 7> lagubaru;
 
-    // Now Playing = "Heavy Rotation by JKT48.flac"
+    // For loop untuk menyalin data array lama ke yang baru
+    // Now Playing: "Heavy Rotation By JKT48.flac"
     for (size_t i = 0; i < kumpulanlagu.size(); i++)
     {
         lagubaru[i] = kumpulanlagu[i];
     }
 
-    // I Love Koding
+    // Menambahkan data baru
     lagubaru[5] = {"Masddho", "Kisinan 2", 347, 23};
     lagubaru[6] = {"Aftershine", "Kalah", 101, 54};
 

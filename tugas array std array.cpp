@@ -36,14 +36,13 @@ int main ()
     // Buat array baru karena yg lama penuh
     array<lagu, 7> lagubaru;
 
-    // For loop untuk menyalin data array lama ke yang baru
-    // Now Playing: "Heavy Rotation By JKT48.flac"
+    // Now Playing = "Heavy Rotation by JKT48.flac"
     for (size_t i = 0; i < kumpulanlagu.size(); i++)
     {
         lagubaru[i] = kumpulanlagu[i];
     }
 
-    // Menambahkan data baru
+    // I Love Koding
     lagubaru[5] = {"Masddho", "Kisinan 2", 347, 23};
     lagubaru[6] = {"Aftershine", "Kalah", 101, 54};
 
@@ -70,19 +69,17 @@ int main ()
         
     };
     cout << " " << endl;
-    // Ngelist yg ganjil
-    cout << "List Lagu ganjil" << endl;
-    for (size_t i = 0; i < lagubaru.size(); i++)
+
+    // Ngelist descending
+
+    cout << "List Lagu Descending" << endl;
+    for (int i = lagubaru.size() - 1; i >= 0; i--)
     {
-        if (i % 2 == 0)
-        {
-            cout << "Artist: " << lagubaru[i].artis;
-            cout << " Judul: " << lagubaru[i].judul;
-            cout << " Played: " << lagubaru[i].played;
-            cout << " Likes: " << lagubaru[i].likes << endl;
-        };
-        
-    };
-        
+        cout << "Artist: " << lagubaru[i].artis;
+        cout << " Judul: " << lagubaru[i].judul;
+        cout << " Played: " << lagubaru[i].played;
+        cout << " Likes: " << lagubaru[i].likes << endl;
+    }
+
     return 0;
 }

@@ -1,32 +1,96 @@
-# Prerequisites
-*.d
+# === General ===
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.swn
+*.sublime-workspace
+*.sublime-project
 
-# Compiled Object files
-*.slo
-*.lo
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.venv/
+env/
+venv/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.pyre/
+
+# === C / C++ ===
 *.o
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
 *.exe
 *.out
-*.app
+*.a
+*.so
+*.dll
+*.dSYM/
+*.gcno
+*.gcda
+*.gch
+*.log
+
+# CMake / Makefiles
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# === Lua ===
+*.luac
+
+# === Web Development ===
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build output
+dist/
+build/
+*.min.js
+*.min.css
+*.map
+
+# Vite / Next / Nuxt / etc.
+.next/
+.nuxt/
+.out/
+.vite/
+.cache/
+
+# === OS Specific ===
+# macOS
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Windows
+ehthumbs.db
+Desktop.ini
+
+# === IDEs and Editors ===
+.vscode/
+.idea/
+*.code-workspace
+*.launch
+*.settings/

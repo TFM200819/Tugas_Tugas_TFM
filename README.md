@@ -3,7 +3,7 @@ Kumpulan tugas doang sih ini. Kedepannya isinya gk cuman c++. Nanti bakalan ada 
 
 ## Cara build dan make
 
-Kalau c++, tinggal build aja pake g++, terus jalanin pake bash/terminal kalo dilinux atau cmd/powershell kalo di windows.<br>
+Kalau c++, tinggal build aja pake compiler pilihan (gcc, clang, visual c++, dll), terus jalanin pake terminal (bash, powershell, dll).<br>
 Kalau web, jalanin aja index.html ke browser pilihan<br>
 Kalo lua compile sendiri interpreternya terus jalanin aja kyk python.<br>
 Untuk sekarang itu aja. Kedepannya paling ada mysql, kalo gk bahasa lain.<br>

@@ -8,6 +8,8 @@ let lagu = [
     ['Sakura no Uta', 'Hana', 5727, 6342, '01.png'],
     ['Uta', 'ICDD', 5382, 7632, 'uta.jfif'],
     ['Kira Kira Days', 'Houkagou Tea Time', 4203, 5397, 'kirakira.jfif'],
+    ['Embraced by the Flame', 'Undead Corporation', 2341, 6783, 'embracedflame.jpg'],
+    ['Root_A Evenescence', 'Syrup Comfiture', 8173, 10928, 'roota.JPG']
 ]
 let element = ''
 for (let i = 0; i < lagu.length; i++) {

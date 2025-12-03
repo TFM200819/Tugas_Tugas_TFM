@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Showcase from '../components/Showcase.astro';
+import Credits from '../components/Credits.astro';
+
+// This is the default locale (jv - Javanese Latin)
+const heroProps = {
+    title: "Sugeng Rawuh",
+    highlight: "Inovasi",
+    description: "Rasakna generasi anyar saka desain produk. Lancar, kuat, lan digawe kanggo sampeyan."
+};
+
+const showcaseProps = {
+    title: "Teknik Presisi",
+    paragraph1: "Produk kita digawe kanthi tliti banget. Saben lengkungan lan garis dirancang kanggo ningkatake kegunaan lan estetika.",
+    paragraph2: "Kita percaya marang minimalisme tanpa kompromi. Antarmuka intuisi, ngidini sampeyan fokus ing apa sing paling penting—karya sampeyan.",
+    features: ["Fitur unggulan siji", "Kemampuan integrasi canggih", "Pangolahan data wektu nyata"],
+    imagePlaceholder: "Gambar Produk"
+};
+
+const creditsProps = {
+    title: "Kredit",
+    credits: [
+        { id: 1, name: "Alex Desainer", role: "Pimpinan UX/UI" },
+        { id: 2, name: "Jordan Dev", role: "Frontend" },
+        { id: 3, name: "Casey Smith", role: "Backend" },
+        { id: 4, name: "Taylor White", role: "Pemilik Produk" },
+        { id: 5, name: "Morgan Lee", role: "Pemasaran" },
+        { id: 6, name: "Riley Brown", role: "Insinyur QA" },
+    ]
+};
+---
+
+<Layout title="Sugeng Rawuh - Tampilan Produk" lang="jv">
+    <Header />
+    
+    <main>
+        <!-- Hero Section -->
+        <Hero {...heroProps} />
+        
+        <!-- Showcase Section -->
+        <Showcase {...showcaseProps} />
+        
+        <!-- Credits Section -->
+        <Credits {...creditsProps} />
+    </main>
+</Layout>

@@ -1,16 +1,32 @@
 ---
-const credits = [
-    { id: 11, name: "Alex Designer", role: "UX/UI Lead" },
+interface CreditPerson {
+    id: number;
+    name: string;
+    role: string;
+}
+
+interface Props {
+    title?: string;
+    credits?: CreditPerson[];
+}
+
+const defaultCredits: CreditPerson[] = [
+    { id: 1, name: "Alex Designer", role: "UX/UI Lead" },
     { id: 2, name: "Jordan Dev", role: "Frontend" },
     { id: 3, name: "Casey Smith", role: "Backend" },
     { id: 4, name: "Taylor White", role: "Product Owner" },
     { id: 5, name: "Morgan Lee", role: "Marketing" },
     { id: 6, name: "Riley Brown", role: "QA Engineer" },
 ];
+
+const { 
+    title = "Credits",
+    credits = defaultCredits
+} = Astro.props;
 ---
 
 <section class="py-20 px-6 bg-gray-50 dark:bg-gray-800/50">
-    <h3 class="text-center text-3xl font-bold mb-12">Credits</h3>
+    <h3 class="text-center text-3xl font-bold mb-12">{title}</h3>
     
     <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {credits.map((person) => (

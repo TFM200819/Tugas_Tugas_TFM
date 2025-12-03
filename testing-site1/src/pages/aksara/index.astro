@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Showcase from '../../components/Showcase.astro';
+import Credits from '../../components/Credits.astro';
+
+const heroProps = {
+    title: "ꦱꦸꦒꦺꦁꦫꦮꦸꦃ",
+    highlight: "ꦆꦤꦺꦴꦮꦱꦶ",
+    description: "ꦫꦱꦏ꧀ꦤ ꦒꦺꦤꦺꦫꦱꦶ ꦲꦤ꧀ꦪꦂ ꦱꦏ ꦢꦺꦱꦻꦤ꧀ ꦥꦿꦺꦴꦢꦸꦏ꧀꧈ ꦭꦤ꧀ꦕꦂ ꦏꦸꦮꦠ꧀ ꦭꦤ꧀ ꦢꦶꦒꦮꦺ ꦏꦁꦒꦺ ꦱꦩ꧀ꦥꦺꦪꦤ꧀꧉"
+};
+
+const showcaseProps = {
+    title: "ꦠꦺꦏ꧀ꦤꦶꦏ꧀ ꦥꦿꦺꦱꦶꦱꦶ",
+    paragraph1: "ꦥꦿꦺꦴꦢꦸꦏ꧀ ꦏꦶꦠ ꦢꦶꦒꦮꦺ ꦏꦤ꧀ꦛꦶ ꦠ꧀ꦭꦶꦠꦶ ꦧꦁꦼꦠ꧀꧉ ꦱꦧꦺꦤ꧀ ꦭꦺꦁꦏꦸꦁꦔꦤ꧀ ꦭꦤ꧀ ꦒꦫꦶꦱ꧀ ꦢꦶꦫꦤ꧀ꦕꦁ ꦏꦁꦒꦺ ꦤꦶꦁꦏꦠꦏꦺ ꦏꦒꦸꦤꦤ꧀ ꦭꦤ꧀ ꦲꦺꦱ꧀ꦠꦺꦠꦶꦏ꧉",
+    paragraph2: "ꦏꦶꦠ ꦥꦼꦂꦕꦪ ꦩꦫꦁ ꦩꦶꦤꦶꦩꦭꦶꦱ꧀ꦩꦺ ꦠꦤ꧀ꦥ ꦏꦺꦴꦩ꧀ꦥꦿꦺꦴꦩꦶ꧉ ꦲꦤ꧀ꦠꦂꦩꦸꦏ ꦲꦶꦤ꧀ꦠꦸꦲꦶꦱꦶ꧈ ꦔꦶꦢꦶꦤꦶ ꦱꦩ꧀ꦥꦺꦪꦤ꧀ ꦥꦺꦴꦏꦸꦱ꧀ ꦲꦶꦁ ꦲꦥ ꦱꦶꦁ ꦥꦭꦶꦁ ꦥꦼꦤ꧀ꦠꦶꦁ꧉",
+    features: ["ꦥꦶꦠꦸꦂ ꦲꦸꦁꦒꦸꦭꦤ꧀ ꦱꦶꦗꦶ", "ꦏꦩꦩ꧀ꦥꦸꦲꦤ꧀ ꦆꦤ꧀ꦠꦺꦒꦿꦱꦶ ꦕꦔ꧀ꦒꦶꦃ", "ꦥꦔꦺꦴꦭꦃꦲꦤ꧀ ꦢꦠ ꦮꦼꦏ꧀ꦠꦸ ꦚꦠ"],
+    imagePlaceholder: "ꦒꦩ꧀ꦧꦂ ꦥꦿꦺꦴꦢꦸꦏ꧀"
+};
+
+const creditsProps = {
+    title: "ꦏꦿꦺꦢꦶꦠ꧀",
+    credits: [
+        { id: 1, name: "ꦲꦭꦺꦏ꧀ꦱ꧀ ꦢꦺꦱꦻꦤꦼꦂ", role: "ꦥꦶꦩ꧀ꦥꦶꦤꦤ꧀ UX/UI" },
+        { id: 2, name: "ꦗꦺꦴꦂꦢꦤ꧀ ꦢꦺꦮ꧀", role: "ꦥꦿꦺꦴꦤ꧀ꦠꦺꦤ꧀ꦢ꧀" },
+        { id: 3, name: "ꦏꦺꦱꦶ ꦱ꧀ꦩꦶꦠ꧀", role: "ꦧꦺꦏ꧀ꦲꦺꦤ꧀ꦢ꧀" },
+        { id: 4, name: "ꦠꦺꦭꦺꦴꦂ ꦮꦻꦠ꧀", role: "ꦥꦼꦩꦶꦭꦶꦏ꧀ ꦥꦿꦺꦴꦢꦸꦏ꧀" },
+        { id: 5, name: "ꦩꦺꦴꦂꦒꦤ꧀ ꦭꦶ", role: "ꦥꦩꦱꦫꦤ꧀" },
+        { id: 6, name: "ꦫꦻꦭꦶ ꦧꦿꦻꦤ꧀", role: "ꦆꦤ꧀ꦱꦶꦤ꧀ꦪꦸꦂ QA" },
+    ]
+};
+---
+
+<Layout title="ꦱꦸꦒꦺꦁꦫꦮꦸꦃ - ꦠꦩ꧀ꦥꦶꦭꦤ꧀ ꦥꦿꦺꦴꦢꦸꦏ꧀" lang="aksara">
+    <Header />
+    
+    <main>
+        <!-- Hero Section -->
+        <Hero {...heroProps} />
+        
+        <!-- Showcase Section -->
+        <Showcase {...showcaseProps} />
+        
+        <!-- Credits Section -->
+        <Credits {...creditsProps} />
+    </main>
+</Layout>

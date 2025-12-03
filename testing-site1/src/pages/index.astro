@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Showcase from '../components/Showcase.astro';
+import Credits from '../components/Credits.astro';
+---
+
+<Layout title="Sugeng Rawuh" lang="jv">
+    <Header />
+    
+    <main>
+        <!-- Hero Section -->
+        <Hero 
+            title="Sugeng Rawuh" 
+            subtitle="Pameran produk ingkang énggal." 
+        />
+        
+        <!-- Showcase Section -->
+        <Showcase title="Inovasi Anyar" />
+        
+        <!-- Credits Section -->
+        <Credits title="Kredit" />
+    </main>
+</Layout>

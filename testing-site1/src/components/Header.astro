@@ -1,0 +1,31 @@
+<header class="fixed w-full top-0 z-50 p-6 flex justify-end gap-4">
+    <!-- Language Switcher -->
+    <div class="relative group">
+        <button class="border-2 border-gray-900 dark:border-white px-4 py-2 font-bold uppercase hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+            EN / ES
+        </button>
+        <!-- Simple dropdown simulation -->
+        <div class="absolute right-0 mt-2 w-32 bg-white dark:bg-gray-800 shadow-lg rounded hidden group-hover:block border border-gray-200 dark:border-gray-700">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">English</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Español</a>
+        </div>
+    </div>
+
+    <!-- Theme Switcher -->
+    <button id="theme-toggle" class="border-2 border-gray-900 dark:border-white px-4 py-2 font-bold uppercase hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+        Theme
+    </button>
+</header>
+
+<script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    themeToggleBtn?.addEventListener('click', () => {
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.theme = 'light';
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+        }
+    });
+</script>

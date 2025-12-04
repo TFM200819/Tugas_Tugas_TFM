@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+@theme {
+  /* Heritage Brown Color Palette */
+  --color-heritage-50: #efebe9;
+  --color-heritage-100: #d7ccc8;
+  --color-heritage-200: #bcaaa4;
+  --color-heritage-300: #a1887f;
+  --color-heritage-400: #8d6e63;
+  --color-heritage-500: #795548;
+  --color-heritage-600: #6d4c41;
+  --color-heritage-700: #5d4037;
+  --color-heritage-800: #4e342e;
+  --color-heritage-900: #3e2723;
+
+  /* Fonts */
+  --font-javanese: "Noto Sans Javanese", sans-serif;
+}
+
+/* Custom Utilities for Manual Dark Mode in v4 */
+@layer utilities {
+
+  /* This ensures the 'dark:' variant works when the 'dark' class is on <html> */
+  :root.dark {
+    color-scheme: dark;
+  }
+}

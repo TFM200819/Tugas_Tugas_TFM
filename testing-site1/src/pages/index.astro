@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Helper component for bilingual text
+const T = { 
+    latin: "Sugeng Rawuh", 
+    aksara: "ꦱꦸꦒꦼꦁꦫꦮꦸꦃ" // Example Javanese Script
+};
+---
+
+<Layout title="Javanese Heritage Showcase">
+	
+	<!-- NAV: Top Right Controls (Sketch 1 & 3 Detail) -->
+	<nav class="fixed top-0 right-0 p-6 z-50 flex gap-4">
+		<!-- Dark Mode Toggle -->
+		<button id="theme-toggle" class="px-4 py-2 bg-heritage-200 dark:bg-heritage-700 rounded border-2 border-heritage-900 dark:border-heritage-100 font-bold shadow-[4px_4px_0px_0px_rgba(62,39,35,1)] hover:translate-y-1 hover:shadow-none transition-all">
+			🌗 Mode
+		</button>
+
+		<!-- Language Toggle -->
+		<button id="lang-toggle" class="px-4 py-2 bg-heritage-200 dark:bg-heritage-700 rounded border-2 border-heritage-900 dark:border-heritage-100 font-bold shadow-[4px_4px_0px_0px_rgba(62,39,35,1)] hover:translate-y-1 hover:shadow-none transition-all">
+			<span>ꦲꦏ꧀ꦱꦫ</span>
+		</button>
+	</nav>
+
+	<!-- SECTION 1: HERO (Sketch 1) -->
+	<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+		<!-- Blurred Background Image -->
+		<div class="absolute inset-0 z-0">
+			<img 
+				src="https://images.unsplash.com/photo-1598325282257-8949f39569e0?q=80&w=2670&auto=format&fit=crop" 
+				alt="Background" 
+				class="w-full h-full object-cover blur-sm brightness-75"
+			/>
+		</div>
+		
+		<!-- Centered Text Content -->
+		<div class="relative z-10 text-center p-8 bg-heritage-900/30 backdrop-blur-md rounded-xl border border-heritage-100/20">
+			<h1 class="text-6xl md:text-8xl font-bold text-white mb-4">
+				<span class="text-latin">The Heritage</span>
+				<span class="text-aksara">ꦮꦫꦶꦱꦤ꧀</span>
+			</h1>
+			<p class="text-xl md:text-2xl text-heritage-100 tracking-widest uppercase">
+				<span class="text-latin">Of Central Java</span>
+				<span class="text-aksara">ꦗꦮꦠꦼꦔꦃ</span>
+			</p>
+		</div>
+	</section>
+
+	<!-- SECTION 2: CONTENT (Sketch 3) -->
+	<section class="min-h-screen flex items-center justify-center py-20 px-8 bg-heritage-100 dark:bg-heritage-800">
+		<div class="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+			
+			<!-- Left: Text -->
+			<div class="space-y-8 order-2 md:order-1">
+				<div class="h-1 w-24 bg-heritage-600 dark:bg-heritage-400"></div> <!-- The line from your sketch -->
+				<h2 class="text-4xl font-bold">
+					<span class="text-latin">History & Culture</span>
+					<span class="text-aksara">ꦱꦗꦫꦃ & ꦧꦸꦣꦪ</span>
+				</h2>
+				<div class="space-y-4 text-lg leading-relaxed text-heritage-800 dark:text-heritage-200">
+					<p>
+						<span class="text-latin">This section represents the main content area you sketched. It is designed to hold the historical context of the heritage site.</span>
+						<span class="text-aksara">ꦥꦸꦤꦶꦏꦮꦶꦱꦶꦏ꧀ꦲꦶꦁꦏꦁꦢꦶꦥꦸꦤ꧀ꦢꦩꦼꦭ꧀...</span>
+					</p>
+					<p>
+						<span class="text-latin">The brown color palette aims to evoke an earthy, historical feel without using complex gradients, keeping it clean and readable.</span>
+						<span class="text-aksara">ꦮꦂꦤꦱꦺꦴꦏ꧀ꦭꦠ꧀ꦥꦸꦤꦶꦏ...</span>
+					</p>
+				</div>
+				<div class="h-1 w-full max-w-md bg-heritage-600 dark:bg-heritage-400"></div> <!-- Another line from sketch -->
+			</div>
+
+			<!-- Right: Image Box -->
+			<div class="order-1 md:order-2 h-[600px] w-full border-4 border-heritage-900 dark:border-heritage-100 p-4 rotate-1 hover:rotate-0 transition-transform duration-500 bg-white dark:bg-heritage-700 shadow-2xl">
+				<div class="w-full h-full bg-heritage-200 dark:bg-heritage-600 overflow-hidden relative">
+					<img 
+						src="https://images.unsplash.com/photo-1628435524931-064554757e2e?q=80&w=2670&auto=format&fit=crop" 
+						alt="Wayang Kulit" 
+						class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+					/>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- SECTION 3: GALLERY (Requested Feature) -->
+	<section class="py-20 bg-heritage-50 dark:bg-heritage-900 overflow-hidden">
+		<div class="max-w-7xl mx-auto px-8 mb-10">
+			<h2 class="text-3xl font-bold border-b-4 border-heritage-500 inline-block pb-2">
+				<span class="text-latin">Gallery</span>
+				<span class="text-aksara">ꦒꦭꦼꦫꦶ</span>
+			</h2>
+		</div>
+		
+		<!-- Horizontal Scroll Container -->
+		<div class="flex overflow-x-auto gap-8 px-8 pb-12 snap-x">
+			{[1, 2, 3, 4].map((item) => (
+				<div class="snap-center shrink-0 w-[400px] group cursor-pointer">
+					<div class="aspect-[4/5] bg-heritage-300 mb-4 overflow-hidden border-2 border-heritage-900 dark:border-heritage-200">
+						<img 
+							src={`https://source.unsplash.com/random/400x500?java,culture,${item}`} 
+							alt="Gallery" 
+							class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+						/>
+					</div>
+					<p class="font-bold text-xl">
+						<span class="text-latin">Artifact {item}</span>
+						<span class="text-aksara">ꦧꦫꦁ {item}</span>
+					</p>
+					<p class="text-sm text-heritage-500 dark:text-heritage-400">18th Century</p>
+				</div>
+			))}
+		</div>
+	</section>
+
+	<!-- SECTION 4: CREDITS / TEAM (Sketch 2) -->
+	<section class="py-24 px-8 bg-heritage-200 dark:bg-heritage-950 border-t-8 border-heritage-900 dark:border-heritage-50">
+		<div class="max-w-6xl mx-auto">
+			<h2 class="text-center text-4xl font-bold mb-16">
+				<span class="text-latin">The Team</span>
+				<span class="text-aksara">ꦠꦶꦩ꧀</span>
+			</h2>
+			
+			<!-- Grid of 6 items as per sketch -->
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				{[1, 2, 3, 4, 5, 6].map((num) => (
+					<div class="bg-heritage-50 dark:bg-heritage-800 p-6 border-2 border-heritage-900 dark:border-heritage-400 shadow-[8px_8px_0px_0px_rgba(62,39,35,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+						<div class="flex items-center gap-6">
+							<div class="text-6xl font-bold text-heritage-300 opacity-50 font-mono">
+								{num}
+							</div>
+							<div>
+								<h3 class="text-2xl font-bold">
+									<span class="text-latin">Contributor Name</span>
+									<span class="text-aksara">ꦗꦼꦤꦼꦁ</span>
+								</h3>
+								<div class="w-12 h-1 bg-heritage-500 my-2"></div> <!-- Small dash from sketch -->
+								<p class="text-sm text-heritage-600 dark:text-heritage-300">Role or Credit Description</p>
+							</div>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+</Layout>
